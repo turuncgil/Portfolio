@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIM Voice Assistant - Beyzanur Kaya Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      a {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        color: #b0b0b0; /* Lighter grey for text */
+        font-size: 16px;
+        text-align: center;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        background-color: #ffffff;
+        padding: 50px 0;
+      }
+      .container {
+        width: 714px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+      video,
+      img {
+        width: 714px;
+        height: auto;
+        margin: 3px 0; /* Reduced space between video and title */
+      }
+      h2 {
+        margin-top: 20px; /* Increased space between title and text */
+      }
+      a {
+        color: #6a6a6a;
+      }
+      a:hover {
+        color: #4a4a4a;
+      }
+      .intro-text {
+        font-size: 14px; /* Smaller font size for the intro text */
+        margin-bottom: 20px;
+      }
+      .github-link {
+        color: #b0b0b0;
+        margin-top: 20px;
+      }
+      .return-link {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        color: #b0b0b0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="intro-text">
+        This project is conducted as part of the Design Driven Project in
+        Construction and Robotics Master's program | RWTH Aachen with the
+        supervision of Jakob Beetz , and the contribution of Saeed Rasagerian
+      </p>
+      <img src="cover.png" alt="Process Map" />
+      <h2>BIM Voice Assistant</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        Digital information loss during the building life cycle, especially
+        between the design and construction phases is incontrovertible. Except
+        for the BIM experts, other involved people, such as craftsmen or project
+        managers, do not have direct access to BIM data.
+      </p>
+      <br />
+      <p>
+        The project’s goal is to introduce a new computer-human interface that
+        allows users to access BIM data with minimal training and effort. During
+        the design process, a VR/AR project presentation session, or on-site
+        construction, there are moments that we reach the limits of a GUI
+        (Graphical User Interface) like a monitor, or a NUI (Natural User
+        Interface) like a mouse; and interaction with BIM is not imaginable. BIM
+        Voice Assistant can play a meaningful role in these moments and open new
+        doors to BIM data transition. BIM Voice Assistant intends to present an
+        Alexa for BIM!
+      </p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <video controls>
+        <!-- Replace with your video source -->
+        <source src="voice_assistant_short.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h2>BIM Voice Assistant Possible Scenarios</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        BIM Voice Assistant understands the voice command, extracts data from
+        the BIM model, and responds with a voice message. The voice-assistant
+        consists of five major modules: Automatic Speech Recognition (ASR),
+        Natural Language Processing (NLP), Natural Language Generation (NLG),
+        Building Information Extraction (BIE), and Text-to-Speech (TTS). The ASR
+        module converts the voice query to a text.
+      </p>
+      <br />
+      <p>
+        The NLP module’s output is the classification of specific keywords
+        within the text as its input data. The BIE module extracts corresponding
+        data from the building information model, according to the classified
+        keywords from the NLP module. The chosen BIM model format in this
+        research is Industry Foundation Classes (IFC). The NLG module uses
+        programmed information including keywords from the NLP module and the
+        obtained building information data from the BIE module to generate the
+        result as a natural language response. Finally, the TTS module converts
+        the required response’s text to a voice message.
+      </p>
+      <br />
+      <br />
+      <img src="diagram.png" alt="diagram" />
+      <h2>Functionality Diagram</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        The robot's movement is simulated and visualized using RVIZ. As the
+        gypsum boards are cut, ROS publishes messages regarding the fabrication
+        process, including whether the process has not started, started, or
+        finished. The resulting panel geometry is subsequently pushed back to
+        the server as an IfcBuildingElementProxy, and the panels are labeled
+        with their fabrication status.
+      </p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <img src="bim voice assistant.jpg" alt="Process Map" />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        Based on a number of application scenarios, several basic commands have
+        been implemented. All stakeholders in the construction industry can
+        benefit from a higher bandwidth in human-computer interaction. The Voice
+        assistant project started with the aim to create three of the most
+        fundamental elements in IFC, ”IFCWall”, ”IFCWindow” and ”IFCDoor” and
+        evolved based on the primary outputs.
+      </p>
+      <br />
+      <p>
+        Using the voice assistant, commands for data extraction, editing, and
+        adding elements have been the most convenient use cases, respectively.
+        It should be noted that regarding adding data to the model (such as a
+        new wall), the voice interface has higher efficiency in combination with
+        other interfaces (GUI or NUI). Moreover, recognition of the construction
+        industry terms has not been always easy for general voice recognition
+        engines like google. So, training a specific one seems beneficial.
+        Between Sphinx, Google, IBM, Snowboy Hotword Detection, and Microsoft
+        Bing, tokenizing the free voice recognition service of google provides a
+        proper level of preciseness for scientific purposes.
+      </p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <img src="2.jpg" alt="Process Map" />
+      <img src="1.jpg" alt="Process Map" />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        A voice assistant for BIM promises higher accessibility to the required
+        data during the building life cycle. It can improve the quality and
+        efficiency of communication between all stakeholders. BIM Voice
+        Assistant has the potential to help architects to add installation
+        instructions for craftsmen. It also facilitates the documentation of the
+        site inspection data and enables us to extract useful insights from huge
+        building models while using other interfaces is not possible. An
+        integrated smartphone application with different authority levels, such
+        as data entry capabilities for architects, basic data extraction
+        capabilities for craftsmen, and data extraction and task assignment for
+        project managers, could be the next step of the project. Also,
+        conventional BIM software packages could benefit from a voice assistant
+        plugin.
+      </p>
+      <br />
+      <br />
+      <p class="github-link">
+        <a href="https://github.com/srtgn/voice_assistant">View on GitHub</a>
+      </p>
+      <div class="return-link">
+        <a href="../../index.html">Return to Main Page</a>
+      </div>
+    </div>
+  </body>
+</html>

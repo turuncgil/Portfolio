@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIM ROS Integration - Beyzanur Kaya Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      a {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        color: #b0b0b0; /* Lighter grey for text */
+        font-size: 16px;
+        text-align: center;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        background-color: #ffffff;
+        padding: 50px 0;
+      }
+      .container {
+        width: 714px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+      video,
+      img {
+        width: 714px;
+        height: auto;
+        margin: 3px 0; /* Reduced space between video and title */
+      }
+      h2 {
+        margin-top: 20px; /* Increased space between title and text */
+      }
+      a {
+        color: #6a6a6a;
+      }
+      a:hover {
+        color: #4a4a4a;
+      }
+      .intro-text {
+        font-size: 14px; /* Smaller font size for the intro text */
+        margin-bottom: 20px;
+      }
+      .github-link {
+        color: #b0b0b0;
+        margin-top: 20px;
+      }
+      .return-link {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        color: #b0b0b0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="intro-text">
+        This project is conducted as part of Construction and Robotics Master's
+        program | RWTH Aachen, with the supervision of Davide Picchi and Lukas
+        Kirner, and the contribution of Elif Akbas & Cemre Karaoglan Yazici
+      </p>
+      <video controls>
+        <!-- Replace with your video source -->
+        <source src="bimrosintro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h2>BIM ROS Integration</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <img src="geometryprocessing.gif" alt="Description of GIF" />
+      <h2>Geometry Processing with IfcOpenshell</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        The package currently pulls the geometry of wall objects (including
+        opening elements inherited from window and door objects) from the
+        WebServer and then panelizes them according to the standard gypsum board
+        dimensions using Python OpenCascade (PyOCC) library. The resulting panel
+        geometry dimensions are then published to the ROS environment as a
+        message to start the cutting process accordingly.
+      </p>
+      <video controls>
+        <!-- Replace with your video source -->
+        <source src="robotcut.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h2>Machinery Simulation with ROS Rvitz</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        The robot's movement is simulated and visualized using RVIZ. As the
+        gypsum boards are cut, ROS publishes messages regarding the fabrication
+        process, including whether the process has not started, started, or
+        finished. The resulting panel geometry is subsequently pushed back to
+        the server as an IfcBuildingElementProxy, and the panels are labeled
+        with their fabrication status.
+      </p>
+      <img src="process.jpg" alt="Process Map" />
+      <h2>Process Visualization with Rhino Grasshopper</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        Grasshopper | Real-time data visualization of '#ProcessStatus', an
+        entity within the Internet of Construction Ontology, is achieved through
+        SPARQL queries to a server with Grasshopper plug-ın.
+      </p>
+      <img src="ProcessDiagram.drawio.png" alt="Process Map" />
+      <img src="ProcessDiagram.drawio (2).png" alt="Software Ecosystem Map" />
+      <br />
+      <br />
+      <p class="github-link">
+        <a href="https://github.com/cemrekaraoglan/bim-ros-integration"
+          >View on GitHub</a
+        >
+      </p>
+      <div class="return-link">
+        <a href="../../index.html">Return to Main Page</a>
+      </div>
+    </div>
+  </body>
+</html>
